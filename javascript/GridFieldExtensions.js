@@ -130,7 +130,7 @@
 			onclick: function() {
 				var link = this.data("href");
 				var cls  = this.parents(".ss-gridfield-add-new-multi-class").find("select").val();
-
+				cls = cls.replace(/\\/g, '-');
 				if(cls && cls.length) {
 					this.getGridField().showDetailView(link.replace("{class}", cls));
 				}
